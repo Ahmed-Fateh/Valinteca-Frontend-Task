@@ -99,12 +99,39 @@
 .auth-page-wrapper .auth-page-sections .auth-page-right-section .auth-page-desc.successfully-logged-in-desc {
   font-size: 16px;
 }
-.auth-page-wrapper .auth-page-sections .auth-page-right-section .create-account-page .search-line::after {
+.auth-page-wrapper .auth-page-sections .auth-page-right-section .auth-form .auth-input-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+.auth-page-wrapper .auth-page-sections .auth-page-right-section .auth-form .auth-input-wrapper:last-of-type {
+  margin-bottom: 20px;
+}
+.auth-page-wrapper .auth-page-sections .auth-page-right-section .auth-form .auth-input-wrapper .auth-input-prepend {
+  position: absolute;
+  inset-inline-start: 5px;
+  top: 30%;
+  inset-inline-start: 15px;
+  color: #9CADF2;
+}
+.auth-page-wrapper .auth-page-sections .auth-page-right-section .auth-form .auth-input-wrapper .auth-input-prepend svg {
+  font-size: 12px;
+}
+.auth-page-wrapper .auth-page-sections .auth-page-right-section .auth-form .auth-input-wrapper .auth-input-prepend::after {
   content: "";
   width: 1px;
   position: absolute;
-  top: 30%;
-  border-right: 1px solid #dce0f3;
-  height: 18px;
-  z-index: 9;
+  top: 15%;
+  -webkit-border-end: 1px solid #DBE3FF;
+          border-inline-end: 1px solid #DBE3FF;
+  height: 20px;
+  inset-inline-end: -12px;
+}
+.auth-page-wrapper .auth-page-sections .auth-page-right-section .auth-form .auth-input {
+  height: 60px;
+  color: #3B3B3B;
+  font-weight: 400;
+  font-size: 16px;
+  -webkit-padding-start: 48px;
+          padding-inline-start: 48px;
+  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */
