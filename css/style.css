@@ -22,17 +22,34 @@
   .auth-page-wrapper .auth-page-sections {
     padding: 30px;
     flex-direction: row;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) {
+  .auth-page-wrapper .auth-page-sections {
+    width: 75%;
   }
 }
 .auth-page-wrapper .auth-page-sections .auth-page-left-section {
+  display: flex;
+  justify-content: center;
   padding: 20px 30px;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .auth-page-wrapper .auth-page-sections .auth-page-left-section {
+    width: 50%;
+  }
 }
 .auth-page-wrapper .auth-page-sections .auth-page-left-section .auth-img {
-  max-width: 315px;
+  min-width: 315px;
+  max-width: 50%;
 }
-@media (min-width: 575px) {
+@media (min-width: 992px) {
   .auth-page-wrapper .auth-page-sections .auth-page-left-section .auth-img {
-    max-width: 450px;
+    min-width: 450px;
+    max-width: 100%;
   }
 }
 .auth-page-wrapper .auth-page-sections .auth-page-right-section {
@@ -48,6 +65,7 @@
     align-items: flex-start;
     text-align: start;
     padding: 30px;
+    width: 50%;
   }
 }
 .auth-page-wrapper .auth-page-sections .auth-page-right-section.welcome-page .welcome-page-title {
@@ -71,4 +89,13 @@
   .auth-page-wrapper .auth-page-sections .auth-page-right-section.welcome-page .welcome-page-desc {
     font-size: 24px;
   }
+}
+.auth-page-wrapper .auth-page-sections .auth-page-right-section .create-account-page .search-line::after {
+  content: "";
+  width: 1px;
+  position: absolute;
+  top: 30%;
+  border-right: 1px solid #dce0f3;
+  height: 18px;
+  z-index: 9;
 }/*# sourceMappingURL=style.css.map */
