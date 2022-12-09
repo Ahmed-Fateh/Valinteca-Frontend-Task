@@ -10,6 +10,7 @@
     <meta name="author" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -23,7 +24,33 @@
             <div class="auth-page-right-section">
                 <h1 class="auth-page-title">Create Account</h1>
                 <p class="auth-page-desc">Go ahead and sign up, let everyone know how awesome you are!</p>
-                <button class="btn btn-primary w-100">Create Account</button>
+                <form class="auth-form w-100">
+                    <div class="auth-input-wrapper">
+                        <div class="auth-input-prepend">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <input type="text" class="auth-input form-control" placeholder="Username">
+                    </div>
+                    <div class="auth-input-wrapper">
+                        <div class="auth-input-prepend">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <input type="text" class="auth-input form-control" placeholder="Email">
+                    </div>
+                    <div class="auth-input-wrapper">
+                        <div class="auth-input-prepend">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <input type="text" class="auth-input form-control" placeholder="Password">
+                    </div>
+                    <div class="auth-input-wrapper">
+                        <div class="auth-input-prepend">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <input type="text" class="auth-input form-control" placeholder="Confirm password">
+                    </div>
+                    <button class="btn btn-primary w-100">Create Account</button>
+                </form>
             </div>
         </div>
     </div>
@@ -31,6 +58,7 @@
     <script src="js/jquery.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
     <script src="js/custom.js"></script>
 </body>
 
