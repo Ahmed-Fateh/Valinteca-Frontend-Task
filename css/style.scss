@@ -68,29 +68,47 @@
 
             }
 
-            &.welcome-page {
-                .welcome-page-title {
-                    color: #2D2D2D;
-                    font-weight: 400;
+            .auth-page-title {
+                color: #2D2D2D;
+                font-weight: 400;
+                font-size: 42px;
+                margin-bottom: 30px;
+
+                &.welcome-page-title {
                     font-size: 42px;
-                    margin-bottom: 30px;
 
                     @media(min-width: 992px) {
                         font-size: 56px;
                     }
                 }
 
-                .welcome-page-desc {
-                    color: #1F1249;
-                    font-weight: 400;
+            }
+
+            .auth-page-desc {
+                color: #1F1249;
+                font-weight: 400;
+                font-size: 16px;
+                margin-bottom: 40px;
+
+                &.welcome-page-desc {
                     font-size: 16px;
-                    margin-bottom: 40px;
 
                     @media(min-width: 992px) {
                         font-size: 24px;
                     }
                 }
+
+                &.successfully-logged-in-desc {
+                    font-size: 16px;
+                }
+
+
             }
+
+
+
+
+
 
             .create-account-page {
                 .search-line {
