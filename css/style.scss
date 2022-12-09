@@ -17,20 +17,38 @@
         background: rgba(245, 247, 255, 0.85);
         border-radius: 10px;
 
-        @media(min-width: 992px) {
+        @media (min-width: 992px) {
             padding: 30px;
             flex-direction: row;
+            flex-wrap: wrap;
+            flex-direction: row;
+
+        }
+
+        @media(min-width: 1200px) {
+            width: 75%;
         }
 
         .auth-page-left-section {
+            display: flex;
+            justify-content: center;
             padding: 20px 30px;
+            width: 100%;
+
+            @media(min-width: 992px) {
+                width: 50%;
+            }
 
             .auth-img {
-                max-width: 315px;
+                min-width: 315px;
+                max-width: 50%;
 
-                @media(min-width: 575px) {
-                    max-width: 450px;
+                @media(min-width: 992px) {
+                    min-width: 450px;
+                    max-width: 100%;
+
                 }
+
             }
         }
 
@@ -46,6 +64,7 @@
                 align-items: flex-start;
                 text-align: start;
                 padding: 30px;
+                width: 50%;
 
             }
 
@@ -69,6 +88,20 @@
 
                     @media(min-width: 992px) {
                         font-size: 24px;
+                    }
+                }
+            }
+
+            .create-account-page {
+                .search-line {
+                    &::after {
+                        content: "";
+                        width: 1px;
+                        position: absolute;
+                        top: 30%;
+                        border-right: 1px solid #dce0f3;
+                        height: 18px;
+                        z-index: 9;
                     }
                 }
             }
