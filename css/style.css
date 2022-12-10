@@ -108,10 +108,11 @@
 }
 .auth-page-wrapper .auth-page-sections .auth-page-right-section .auth-form .auth-input-wrapper .auth-input-prepend {
   position: absolute;
-  inset-inline-start: 5px;
-  top: 30%;
   inset-inline-start: 15px;
   color: #9CADF2;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 .auth-page-wrapper .auth-page-sections .auth-page-right-section .auth-form .auth-input-wrapper .auth-input-prepend svg {
   font-size: 12px;
@@ -120,7 +121,6 @@
   content: "";
   width: 1px;
   position: absolute;
-  top: 15%;
   -webkit-border-end: 1px solid #DBE3FF;
           border-inline-end: 1px solid #DBE3FF;
   height: 20px;
