@@ -24,32 +24,36 @@
             <div class="auth-page-right-section">
                 <h1 class="auth-page-title">Create Account</h1>
                 <p class="auth-page-desc">Go ahead and sign up, let everyone know how awesome you are!</p>
-                <form class="auth-form w-100">
+                <form class="auth-form w-100" name="createAccountForm" action="">
                     <div class="auth-input-wrapper">
                         <div class="auth-input-prepend">
                             <i class="fa-regular fa-user"></i>
                         </div>
-                        <input type="text" class="auth-input form-control" placeholder="Username">
+                        <input type="text" class="auth-input form-control" placeholder="Username" name="userNameInput">
+                        <div class="invalid-feedback">Username must consist of 5 to 15 characters, only letters and numbers are allowed, with no numbers at the beginning or the end.</div>
                     </div>
                     <div class="auth-input-wrapper">
                         <div class="auth-input-prepend">
                             <i class="fa-regular fa-envelope"></i>
                         </div>
-                        <input type="text" class="auth-input form-control" placeholder="Email">
+                        <!-- <input type="email" name="emailInput" class="auth-input form-control is-invalid" placeholder="Email"> -->
+                        <input name="emailInput" class="auth-input form-control" placeholder="Email">
+                        <div class="invalid-feedback">Email must be in a valid format.</div>
                     </div>
                     <div class="auth-input-wrapper">
                         <div class="auth-input-prepend">
                             <i class="fa-solid fa-lock"></i>
                         </div>
-                        <input type="text" class="auth-input form-control" placeholder="Password">
+                        <input type="text" class="auth-input form-control" placeholder="Password"  name="passwordInput">
                     </div>
                     <div class="auth-input-wrapper">
                         <div class="auth-input-prepend">
                             <i class="fa-solid fa-lock"></i>
                         </div>
-                        <input type="text" class="auth-input form-control" placeholder="Confirm password">
+                        <input type="text" class="auth-input form-control" placeholder="Confirm password" name="confirmPasswordInput">
+                        <div class="invalid-feedback">Password must be at least 8 characters.</div>
                     </div>
-                    <button class="btn btn-primary w-100">Create Account</button>
+                    <button class="btn btn-primary w-100" type="submit">Create Account</button>
                 </form>
             </div>
         </div>

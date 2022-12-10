@@ -116,10 +116,11 @@
 
                     .auth-input-prepend {
                         position: absolute;
-                        inset-inline-start: 5px;
-                        top: 30%;
                         inset-inline-start: 15px;
                         color: #9CADF2;
+                        height: 60px;
+                        display: flex;
+                        align-items: center;
 
                         svg {
                             font-size: 12px;
@@ -129,7 +130,6 @@
                             content: "";
                             width: 1px;
                             position: absolute;
-                            top: 15%;
                             border-inline-end: 1px solid #DBE3FF;
                             height: 20px;
                             inset-inline-end: -12px;
