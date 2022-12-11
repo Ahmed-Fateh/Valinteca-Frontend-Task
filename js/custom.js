@@ -1,4 +1,4 @@
-document.forms["createAccountForm"].onsubmit = function validateForm(e) {
+function validateForm(e) {
     let userNameInputValid = false;
     let userNameInput = document.querySelector("[name='userNameInput']")
     const numberRegex = /^([^0-9]*)$/;
@@ -48,6 +48,39 @@ document.forms["createAccountForm"].onsubmit = function validateForm(e) {
 
 
     if (userNameInputValid == true && emailInputValid == true && passwordInputValid == true) {
+        e.preventDefault();
+        fetch('https://goldblv.com/api/hiring/tasks/register', {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: userNameInput.value,
+                email: emailInput.value,
+                password: passwordInput.value,
+                password_confirmation: confirmPasswordInput.value
+            })
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.errors) {
+                    document.getElementById('server-error').innerHTML = err.errors.password[0];
+                } else if (data.id) {
+                    localStorage.setItem("email", data.email);
+                    window.location.href = "successfully-logged-in.html";
+                }
+            }).catch(err => {
+            })
+    }
+
+}
+
+window.onload = function getUserEmail() {
+    const userEmail = localStorage.getItem('email');
+    if (document.getElementById('email-data')) {
+        document.getElementById('email-data').innerHTML = userEmail;
+
     }
 
 }
