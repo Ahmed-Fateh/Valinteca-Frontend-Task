@@ -49,6 +49,7 @@ function validateForm(e) {
 
     if (userNameInputValid == true && emailInputValid == true && passwordInputValid == true) {
         e.preventDefault();
+
         fetch('https://goldblv.com/api/hiring/tasks/register', {
             method: "POST",
             headers: {
@@ -65,22 +66,18 @@ function validateForm(e) {
             .then(res => res.json())
             .then(data => {
                 if (data.errors) {
-                    document.getElementById('server-error').innerHTML = err.errors.password[0];
+                    document.getElementById('server-error').innerHTML = data.errors.password[0];
                 } else if (data.id) {
                     localStorage.setItem("email", data.email);
                     window.location.href = "successfully-logged-in.html";
                 }
-            }).catch(err => {
-            })
+            }).catch(err => { })
     }
-
 }
 
 window.onload = function getUserEmail() {
     const userEmail = localStorage.getItem('email');
     if (document.getElementById('email-data')) {
         document.getElementById('email-data').innerHTML = userEmail;
-
     }
-
 }
