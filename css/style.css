@@ -98,6 +98,7 @@
 }
 .auth-page-wrapper .auth-page-sections .auth-page-right-section .auth-page-desc.successfully-logged-in-desc {
   font-size: 16px;
+  min-height: 24px;
 }
 .auth-page-wrapper .auth-page-sections .auth-page-right-section .auth-form .auth-input-wrapper {
   position: relative;

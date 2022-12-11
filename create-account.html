@@ -24,7 +24,7 @@
             <div class="auth-page-right-section">
                 <h1 class="auth-page-title">Create Account</h1>
                 <p class="auth-page-desc">Go ahead and sign up, let everyone know how awesome you are!</p>
-                <form class="auth-form w-100" name="createAccountForm" action="">
+                <form class="auth-form w-100" name="createAccountForm" id="createAccountFormId" onsubmit="validateForm(event)">
                     <div class="auth-input-wrapper">
                         <div class="auth-input-prepend">
                             <i class="fa-regular fa-user"></i>
@@ -53,7 +53,8 @@
                         <input type="text" class="auth-input form-control" placeholder="Confirm password" name="confirmPasswordInput">
                         <div class="invalid-feedback">Password must be at least 8 characters.</div>
                     </div>
-                    <button class="btn btn-primary w-100" type="submit">Create Account</button>
+                    <div id="server-error" class="invalid-feedback d-block mb-3"></div>
+                    <button class="btn btn-primary w-100" type="submit" >Create Account</button>
                 </form>
             </div>
         </div>
